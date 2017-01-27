@@ -8,7 +8,10 @@ namespace Assets.Entites.Track
     [Serializable]
     public class TrackPiece : BezierCurve
     {
-        public List<TrackPiece> edges;
-        private List<TrackPiece> reverseEdges;
+        public List<TrackPiece> forwardEdges;
+        public List<TrackPiece> reverseEdges;
+
+        public TrackPiece forwardActive;
+        public TrackPiece reverseActive;
     }
 }
