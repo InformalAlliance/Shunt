@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using System.Collections;
+using Assets.Entites.Track;
 
 [CustomEditor(typeof(BezierCurve))]
 public class BezierCurveEditor : Editor 
@@ -234,30 +235,42 @@ public class BezierCurveEditor : Editor
 			if(p != caller) DrawPointSceneGUI(p);
 		}
 	}
-	
-	[MenuItem("GameObject/Create Other/Bezier Curve")]
-	public static void CreateCurve(MenuCommand command)
-	{
-		GameObject curveObject = new GameObject("BezierCurve");
-		Undo.RegisterUndo(curveObject, "Undo Create Curve");
-		BezierCurve curve = curveObject.AddComponent<BezierCurve>();
-		
-		BezierPoint p1 = curve.AddPointAt(Vector3.forward * 0.5f);
-		p1.handleStyle = BezierPoint.HandleStyle.Connected;
-		p1.handle1 = new Vector3(-0.28f, 0, 0);
-		
-		BezierPoint p2 = curve.AddPointAt(Vector3.right * 0.5f);
-		p2.handleStyle = BezierPoint.HandleStyle.Connected;
-		p2.handle1 = new Vector3(0, 0, 0.28f);
-		
-		BezierPoint p3 = curve.AddPointAt(-Vector3.forward * 0.5f);
-		p3.handleStyle = BezierPoint.HandleStyle.Connected;
-		p3.handle1 = new Vector3(0.28f, 0, 0);		
-		
-		BezierPoint p4 = curve.AddPointAt(-Vector3.right * 0.5f);
-		p4.handleStyle = BezierPoint.HandleStyle.Connected;
-		p4.handle1 = new Vector3(0, 0, -0.28f);
-		
-		curve.close = true;
-	}
+
+    [MenuItem("GameObject/Create Other/Bezier Curve")]
+    public static void CreateBezierCurve(MenuCommand command)
+    {
+        CreateBezierCurve<BezierCurve>(command);
+    }
+
+    [MenuItem("GameObject/Create Other/Track/Track Piece")]
+    public static void CreateTrackPiece(MenuCommand command)
+    {
+        CreateBezierCurve<TrackPiece>(command);
+    }
+
+    public static void CreateBezierCurve<T>(MenuCommand command) where T : BezierCurve
+    {
+        var typeName = typeof(T).Name;
+        GameObject curveObject = new GameObject(typeName);
+        Undo.RegisterUndo(curveObject, "Undo Create " + typeName);
+        BezierCurve curve = curveObject.AddComponent<T>();
+
+        BezierPoint p1 = curve.AddPointAt(Vector3.forward * 0.5f);
+        p1.handleStyle = BezierPoint.HandleStyle.Connected;
+        p1.handle1 = new Vector3(-0.28f, 0, 0);
+
+        BezierPoint p2 = curve.AddPointAt(Vector3.right * 0.5f);
+        p2.handleStyle = BezierPoint.HandleStyle.Connected;
+        p2.handle1 = new Vector3(0, 0, 0.28f);
+
+        BezierPoint p3 = curve.AddPointAt(-Vector3.forward * 0.5f);
+        p3.handleStyle = BezierPoint.HandleStyle.Connected;
+        p3.handle1 = new Vector3(0.28f, 0, 0);
+
+        BezierPoint p4 = curve.AddPointAt(-Vector3.right * 0.5f);
+        p4.handleStyle = BezierPoint.HandleStyle.Connected;
+        p4.handle1 = new Vector3(0, 0, -0.28f);
+
+        curve.close = true;
+    }
 }

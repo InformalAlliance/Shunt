@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Behaviours\SuicideBehaviour.cs" />
+    <Compile Include="Assets\Entites\Track\TrackPiece.cs" />
     <Compile Include="Assets\Libraries\BezierCurves\Scripts\BezierCurve.cs" />
     <Compile Include="Assets\Libraries\BezierCurves\Scripts\BezierPoint.cs" />
     <Reference Include="UnityEngine.UI">
