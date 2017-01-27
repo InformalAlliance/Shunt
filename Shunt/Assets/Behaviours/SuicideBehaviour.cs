@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SuicideBehaviourScript : MonoBehaviour {
+public class SuicideBehaviour : MonoBehaviour {
 
     public float delay = 1;
 
