@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class SuicideBehaviourScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public float delay = 1;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        Destroy(this.gameObject, delay);
 	}
 }
