@@ -1,2 +1,4 @@
 /Shunt/Library
 /Shunt/Temp
+/Shunt/*.userprefs
+/Shunt/.vs/Shunt/v15/*.suo
