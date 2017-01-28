@@ -445,8 +445,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _curve: {fileID: 1423334090}
   handleStyle: 0
-  _handle1: {x: 0.079512835, y: 0.04608786, z: -0.34589553}
-  _handle2: {x: -0.079512835, y: -0.04608786, z: 0.34589553}
+  _handle1: {x: 0.013737738, y: -0.009824216, z: -0.59588146}
+  _handle2: {x: -0.013737738, y: 0.009824216, z: 0.59588146}
 --- !u!4 &845607146
 Transform:
   m_ObjectHideFlags: 0
@@ -489,8 +489,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _curve: {fileID: 1423334090}
   handleStyle: 0
-  _handle1: {x: -0.42945385, y: 0.030996919, z: 0.07895994}
-  _handle2: {x: 0.42945385, y: -0.030996919, z: -0.07895994}
+  _handle1: {x: -0.4890207, y: 0.030575275, z: 0.010853529}
+  _handle2: {x: 0.4890207, y: -0.030575275, z: -0.010853529}
 --- !u!4 &850140624
 Transform:
   m_ObjectHideFlags: 0
@@ -1068,8 +1068,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _curve: {fileID: 1618401544}
   handleStyle: 0
-  _handle1: {x: 0, y: 0, z: -0.28}
-  _handle2: {x: -0, y: -0, z: 0.28}
+  _handle1: {x: 0.0005020499, y: -0.005322695, z: -0.5400672}
+  _handle2: {x: -0.0005020499, y: 0.005322695, z: 0.5400672}
 --- !u!4 &1672003170
 Transform:
   m_ObjectHideFlags: 0
