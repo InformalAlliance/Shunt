@@ -766,7 +766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
+  currentTrackPiece: {fileID: 733066636}
   currentTrackPiecePosition: 0
   currentTrackDirection: 0
   speed: 0.01
