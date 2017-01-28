@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTrackPiece: {fileID: 941921667}
-  currentTrackPiecePosition: 0.2
+  currentTrackPiecePosition: 0.1
   currentTrackDirection: 0
   speed: 0.01
 --- !u!23 &372219399
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTrackPiece: {fileID: 941921667}
-  currentTrackPiecePosition: 0.4
+  currentTrackPiecePosition: 0.2
   currentTrackDirection: 0
   speed: 0.01
 --- !u!23 &385497687
@@ -723,7 +723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTrackPiece: {fileID: 941921667}
-  currentTrackPiecePosition: 0.1
+  currentTrackPiecePosition: 0.05
   currentTrackDirection: 0
   speed: 0.01
 --- !u!23 &1552735476
@@ -820,7 +820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTrackPiece: {fileID: 941921667}
-  currentTrackPiecePosition: 0.5
+  currentTrackPiecePosition: 0.25
   currentTrackDirection: 0
   speed: 0.01
 --- !u!23 &1581668333
@@ -1058,7 +1058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTrackPiece: {fileID: 941921667}
-  currentTrackPiecePosition: 0.3
+  currentTrackPiecePosition: 0.15
   currentTrackDirection: 0
   speed: 0.01
 --- !u!23 &1702622530
