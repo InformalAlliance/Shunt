@@ -25,13 +25,13 @@ namespace Assets.Entites.Train
 
             currentTrackPiecePosition += speed;
 
-            if (currentTrackPiecePosition >= NearlyOne)
+            if (currentTrackPiecePosition >= currentTrackPiece.length)
             {
                 var nextPiece = GetNextPiece();
                 if (nextPiece == null)
                 {
                     speed = 0;
-                    currentTrackPiecePosition = NearlyOne;
+                    currentTrackPiecePosition = currentTrackPiece.length;
                 }
                 else
                 {
@@ -39,7 +39,7 @@ namespace Assets.Entites.Train
                     currentTrackPiecePosition = 0;
                 }
             }
-            gameObject.transform.position = currentTrackPiece.GetPointAt(currentTrackPiecePosition);
+            gameObject.transform.position = currentTrackPiece.GetPointAtDistance(currentTrackPiecePosition);
         }
 
         private TrackPiece GetNextPiece()
