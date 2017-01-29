@@ -27,6 +27,7 @@ namespace Assets.Entites.Train
 
             if (currentTrackPiecePosition >= currentTrackPiece.length)
             {
+                var positionOnNext = currentTrackPiecePosition - currentTrackPiece.length;
                 var nextPiece = GetNextPiece();
                 if (nextPiece == null)
                 {
@@ -36,7 +37,7 @@ namespace Assets.Entites.Train
                 else
                 {
                     currentTrackPiece = nextPiece;
-                    currentTrackPiecePosition = 0;
+                    currentTrackPiecePosition = positionOnNext;
                 }
             }
             gameObject.transform.position = currentTrackPiece.GetPointAtDistance(currentTrackPiecePosition);
