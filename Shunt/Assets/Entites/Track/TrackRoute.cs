@@ -49,7 +49,6 @@ namespace Assets.Entites.Track
 
         public Vector3 GetPointAtDistance(float distance)
         {
-            Debug.Log("GetPointAtDistance(" + distance + ")");
             float rollingDistance = 0;
             foreach (var edge in edges)
             {
@@ -57,7 +56,6 @@ namespace Assets.Entites.Track
                 {
                     float edgeDistance = distance - rollingDistance;
                     var point = edge.GetPointAtDistance(edgeDistance);
-                    Debug.Log("Edge = " + edge + ", point = {" + point.x + ":" + point.y + ":" + point.z + "}");
                     return point;
                 }
                 rollingDistance += edge.length;

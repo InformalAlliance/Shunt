@@ -549,12 +549,6 @@ public class BezierCurve : MonoBehaviour {
 			curveLength = ApproximateLength(firstPoint, secondPoint, resolution);
         }
         distance -= totalLength;
-        Debug.Log("firstPoint = {" + firstPoint.position.x + "," + firstPoint.position.y + "," + firstPoint.position.z + "}"
-        + " secondPoint = {" + secondPoint.position.x + "," + secondPoint.position.y + "," + secondPoint.position.z + "}"
-        + " distance = " + distance
-        + " curveLength = " + curveLength
-        + " distance / curveLength = " + (distance / curveLength));
-        //Debug.Log("GetPoint(" + (distance / curveLength) + "," + firstPoint.position + "," + secondPoint.position + ")");
         return GetPoint(firstPoint, secondPoint, distance / curveLength);
 	}
 }

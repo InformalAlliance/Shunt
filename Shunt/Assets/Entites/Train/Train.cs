@@ -9,7 +9,11 @@ namespace Assets.Entites.Train
     {
         public List<TrainCarriage> carriages;
         public TrackRoute route;
+        private float acceleration = 0.001f;
+        private float maxSpeed = 0.02f;
+        private float speed = 0;
         private bool isFirstFrame = true;
+        private float positionOnRoute;
 
         public float Length
         {
@@ -28,17 +32,18 @@ namespace Assets.Entites.Train
             {
                 isFirstFrame = false;
                 UpdateFirstFrame();
+                return;
             }
             UpdatePosition();
         }
 
-        private void PlaceOnRoute(TrackRoute route)
+        private void PlaceOnRoute(TrackRoute route, float position = 0)
         {
             float distance = 0;
             foreach (var carriage in carriages)
             {
                 var middle = carriage.Length / 2;
-                carriage.PlaceAt(route, distance + middle);
+                carriage.PlaceAt(route, distance + middle + position);
                 distance += carriage.Length;
             }
         }
@@ -50,6 +55,21 @@ namespace Assets.Entites.Train
 
         private void UpdatePosition()
         {
+            if (speed < maxSpeed)
+            {
+                speed += acceleration;
+                if (speed > maxSpeed)
+                {
+                    speed = maxSpeed;
+                }
+            }
+            positionOnRoute += speed;
+            if (positionOnRoute > route.Length - Length)
+            { 
+                positionOnRoute = 0;
+                speed = 0;
+            }
+            PlaceOnRoute(route, positionOnRoute);
         }
     }
 }
