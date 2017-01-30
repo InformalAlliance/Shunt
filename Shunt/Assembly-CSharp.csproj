@@ -49,6 +49,8 @@
     <Compile Include="Assets\Behaviours\SuicideBehaviour.cs" />
     <Compile Include="Assets\Entites\Track\TrackDirection.cs" />
     <Compile Include="Assets\Entites\Track\TrackPiece.cs" />
+    <Compile Include="Assets\Entites\Track\TrackRoute.cs" />
+    <Compile Include="Assets\Entites\Train\Train.cs" />
     <Compile Include="Assets\Entites\Train\TrainCarriage.cs" />
     <Compile Include="Assets\Entites\Train\TrainEngine.cs" />
     <Compile Include="Assets\Libraries\BezierCurves\Scripts\BezierCurve.cs" />

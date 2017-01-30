@@ -46,6 +46,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Entites\Track\Editor\TrackRouteEditor.cs" />
+    <Compile Include="Assets\Entites\Train\Editor\TrainEditor.cs" />
     <Compile Include="Assets\Libraries\BezierCurves\Editor\BezierCurveEditor.cs" />
     <Compile Include="Assets\Libraries\BezierCurves\Editor\BezierPointEditor.cs" />
     <Reference Include="UnityEngine.Advertisements">
