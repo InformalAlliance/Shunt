@@ -63,7 +63,7 @@ namespace Assets.Entites.Train
                     speed = maxSpeed;
                 }
             }
-            positionOnRoute += speed;
+            positionOnRoute += speed * Time.deltaTime * 100;
             if (positionOnRoute > route.Length - Length)
             { 
                 positionOnRoute = 0;
