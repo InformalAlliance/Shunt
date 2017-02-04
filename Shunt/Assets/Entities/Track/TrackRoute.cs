@@ -68,23 +68,23 @@ namespace Assets.Entites.Track
             return new Vector3();
         }
 
-        public TrackRoute Reverse()
+        public void Reverse()
         {
-            var route = gameObject.AddComponent<TrackRoute>();
-            route.edges = new List<TrackPiece>();
-            route.startPoints = new List<BezierPoint>();
+            var newEdges = new List<TrackPiece>();
+            var newStartPoints = new List<BezierPoint>();
             for (int i = edges.Count - 1; i >= 0; i--)
             {
                 var edge = edges[i];
                 var oldStartPoint = startPoints[i];
-                route.edges.Add(edge);
-                route.startPoints.Add(
+                newEdges.Add(edge);
+                newStartPoints.Add(
                     edge.FirstPoint == oldStartPoint
                     ? edge.LastPoint
                     : edge.FirstPoint
                 );
             }
-            return route;
+			edges = newEdges;
+			startPoints = newStartPoints;
         }
     }
 }
