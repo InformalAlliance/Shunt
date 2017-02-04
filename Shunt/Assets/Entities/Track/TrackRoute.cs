@@ -84,18 +84,6 @@ namespace Assets.Entites.Track
                     : edge.FirstPoint
                 );
             }
-            //Debug.Log("old");
-            //for (int i = 0; i < edges.Count; i++)
-            //{
-            //    Debug.Log(" edge = " + edges[i]);
-            //    Debug.Log(" startPoints = " + startPoints[i]);
-            //}
-            //Debug.Log("new");
-            //for (int i = 0; i < route.edges.Count; i++)
-            //{
-            //    Debug.Log(" edge = " + route.edges[i]);
-            //    Debug.Log(" startPoints = " + route.startPoints[i]);
-            //}
             return route;
         }
     }
