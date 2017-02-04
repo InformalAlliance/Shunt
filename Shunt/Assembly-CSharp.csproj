@@ -56,7 +56,6 @@
      <Compile Include="Assets\Entities\Train\TrainEngine.cs" />
      <Compile Include="Assets\Libraries\BezierCurves\Scripts\BezierCurve.cs" />
      <Compile Include="Assets\Libraries\BezierCurves\Scripts\BezierPoint.cs" />
-     <Compile Include="Assets\Splines\AdvancedBezierCurve.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
