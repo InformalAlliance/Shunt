@@ -17,7 +17,7 @@ using System.Collections.Generic;
 public class BezierCurve : MonoBehaviour {
 	
 	#region PublicVariables
-	
+
 	/// <summary>
 	///  	- the number of mid-points calculated for each pair of bezier points
 	///  	- used for drawing the curve in the editor
@@ -72,17 +72,27 @@ public class BezierCurve : MonoBehaviour {
 	public BezierPoint this[int index]
 	{
 		get { return points[index]; }
-	}
-	
-	/// <summary>
-	/// 	- number of points stored in 'points' variable
-	///		- set internally
-	///		- does not include "handles"
-	/// </summary>
-	/// <value>
-	/// 	- The point count
-	/// </value>
-	public int pointCount
+    }
+
+    public BezierPoint FirstPoint
+    {
+        get { return points[0]; }
+    }
+
+    public BezierPoint LastPoint
+    {
+        get { return points[points.Length - 1]; }
+    }
+
+    /// <summary>
+    /// 	- number of points stored in 'points' variable
+    ///		- set internally
+    ///		- does not include "handles"
+    /// </summary>
+    /// <value>
+    /// 	- The point count
+    /// </value>
+    public int pointCount
 	{
 		get { return points.Length; }
 	}

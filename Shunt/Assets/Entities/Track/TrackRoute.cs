@@ -1,5 +1,4 @@
-﻿using Assets.Entites.Track;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -50,17 +49,54 @@ namespace Assets.Entites.Track
         public Vector3 GetPointAtDistance(float distance)
         {
             float rollingDistance = 0;
-            foreach (var edge in edges)
+            for (int i = 0; i < edges.Count; i++)
             {
+                var edge = edges[i];
+                var startPoint = startPoints[i];
+                
                 if (rollingDistance + edge.length >= distance)
                 {
                     float edgeDistance = distance - rollingDistance;
-                    var point = edge.GetPointAtDistance(edgeDistance);
+                    var edgeDistanceDirection = edge.FirstPoint == startPoint
+                        ? edgeDistance
+                        : edge.length - edgeDistance;
+                    var point = edge.GetPointAtDistance(edgeDistanceDirection);
                     return point;
                 }
                 rollingDistance += edge.length;
             }
             return new Vector3();
+        }
+
+        public TrackRoute Reverse()
+        {
+            var route = gameObject.AddComponent<TrackRoute>();
+            route.edges = new List<TrackPiece>();
+            route.startPoints = new List<BezierPoint>();
+            for (int i = edges.Count - 1; i >= 0; i--)
+            {
+                var edge = edges[i];
+                var oldStartPoint = startPoints[i];
+                route.edges.Add(edge);
+                route.startPoints.Add(
+                    edge.FirstPoint == oldStartPoint
+                    ? edge.LastPoint
+                    : edge.FirstPoint
+                );
+            }
+            //Debug.Log("old");
+            //for (int i = 0; i < edges.Count; i++)
+            //{
+            //    Debug.Log(" edge = " + edges[i]);
+            //    Debug.Log(" startPoints = " + startPoints[i]);
+            //}
+            //Debug.Log("new");
+            //for (int i = 0; i < route.edges.Count; i++)
+            //{
+            //    Debug.Log(" edge = " + route.edges[i]);
+            //    Debug.Log(" startPoints = " + route.startPoints[i]);
+            //}
+            return route;
         }
     }
 }

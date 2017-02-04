@@ -65,7 +65,8 @@ namespace Assets.Entites.Train
             }
             positionOnRoute += speed * Time.deltaTime * 100;
             if (positionOnRoute > route.Length - Length)
-            { 
+            {
+                route = route.Reverse();
                 positionOnRoute = 0;
                 speed = 0;
             }
