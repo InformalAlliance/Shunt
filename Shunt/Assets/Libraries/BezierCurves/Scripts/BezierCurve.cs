@@ -121,11 +121,13 @@ public class BezierCurve : MonoBehaviour {
 			return _length;
 		}
 	}
-	
-	#endregion
-	
-	#region PrivateVariables
-	
+
+    #endregion
+
+    #region PrivateVariables
+
+    private const float AngleAtDistancePad = 0.01f;
+
 	/// <summary> 
 	/// 	- Array of point objects that make up this curve
 	///		- Populated through editor
@@ -152,17 +154,17 @@ public class BezierCurve : MonoBehaviour {
 		dirty = true;
 	}
 
-	#endregion
-	
-	#region PublicFunctions
+    #endregion
 
-	/// <summary>
-	/// 	- Adds the given point to the end of the curve ("points" array)
-	/// </summary>
-	/// <param name='point'>
-	/// 	- The point to add.
-	/// </param>
-	public void AddPoint(BezierPoint point)
+    #region PublicFunctions
+
+    /// <summary>
+    /// 	- Adds the given point to the end of the curve ("points" array)
+    /// </summary>
+    /// <param name='point'>
+    /// 	- The point to add.
+    /// </param>
+    public void AddPoint(BezierPoint point)
 	{
 		List<BezierPoint> tempArray = new List<BezierPoint>(points);
 		tempArray.Add(point);
@@ -561,4 +563,13 @@ public class BezierCurve : MonoBehaviour {
         distance -= totalLength;
         return GetPoint(firstPoint, secondPoint, distance / curveLength);
 	}
+
+    public float GetAngleAtDistance(float distance)
+    {
+        var d1 = Mathf.Max(distance - AngleAtDistancePad, 0);
+        var d2 = Mathf.Min(distance + AngleAtDistancePad, length);
+        var p1 = GetPointAtDistance(d1);
+        var p2 = GetPointAtDistance(d2);
+        return Mathf.Atan2(p2.z - p1.z, p2.x - p1.x);
+    }
 }
