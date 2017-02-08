@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 11575979}
   - component: {fileID: 11575978}
   - component: {fileID: 11575977}
+  - component: {fileID: 11575982}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -178,6 +179,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 8.771001, y: 28.705002, z: -0.554}
+--- !u!114 &11575982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 11575976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c1dd28a6ba71d43828918a516e9941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locusOffset: {x: 0, y: 0.15, z: 0}
+  rotationSpeed: 90
+  panningAcceleration: 50
+  panningSpeed: 12
+  panningDecay: 5
+  zoomDecay: 5
+  zoomSpeed: 25
+  defaultDistance: 10
+  minDistance: 1
+  maxDistance: 50
+  defaultOrientation: 45
+  defaultInclination: -20
+  canRotate: 1
+  canZoom: 1
+  rightMouseOrbits: 1
+  invertY: 0
+  minInclination: 5
+  maxInclination: 86
 --- !u!1 &11714256
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,11 +238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &11714258
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -404,11 +429,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &52041312
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -546,11 +566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &67255777
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -644,11 +659,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 1048458869}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &70060047
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -747,11 +757,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 1048458869}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &138463099
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -946,11 +951,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 1048458869}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &159853634
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1241,11 +1241,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &287526845
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1385,11 +1380,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &293971764
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1605,11 +1595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &343788189
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1845,11 +1830,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &365195252
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1987,11 +1967,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &375602570
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2151,11 +2126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 1048458869}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &409239106
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2622,11 +2592,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &550558313
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2877,11 +2842,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 1048458869}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &674341922
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3672,11 +3632,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &816975385
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3770,11 +3725,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &817719919
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3917,11 +3867,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &839870804
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4073,11 +4018,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &853427783
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4322,11 +4262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &896692573
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4514,11 +4449,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &925729350
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5012,11 +4942,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 1048458869}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &1057022136
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5193,11 +5118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &1090281979
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5770,11 +5690,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &1243003544
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5873,11 +5788,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &1256272778
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6843,11 +6753,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 1048458869}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &1440425797
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7032,11 +6937,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 1048458869}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &1466890218
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7870,11 +7770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &1704283311
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8528,11 +8423,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &1894191593
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8881,11 +8771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &1977127731
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8979,11 +8864,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &1977544141
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9219,11 +9099,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &2017536793
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9744,11 +9619,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e40491e6ce40049ad51a31f06a9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTrackPiece: {fileID: 0}
-  currentTrackPiecePosition: 0
-  currentTrackDirection: 0
-  speed: 0.01
-  acceleration: 0.01
 --- !u!23 &2139997553
 MeshRenderer:
   m_ObjectHideFlags: 0
